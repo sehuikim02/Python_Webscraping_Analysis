@@ -31,6 +31,7 @@ else:
     st.subheader(f" {sido_name}의 인구수 현황")
     fig, ax = plt.subplots(figsize=(18, 12))
     sns.barplot(x='행정구역', y='인구수', data=sido_df.sort_values(by='인구수', ascending=False), ax=ax, hue='행정구역')
+    # plot의 타이틀
     ax.set_title(f'{sido_name} 행정구역별 인구수')
     st.pyplot(fig)
 
